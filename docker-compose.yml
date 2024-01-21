@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  nextjs:
+    container_name: nextjs
+    build:
+      context: .
+      target: dev
+    restart: always
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    command: "npm run dev"
+
+networks:
+  localdevelopment:
+    driver: bridge
