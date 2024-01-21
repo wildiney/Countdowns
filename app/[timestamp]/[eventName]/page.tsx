@@ -31,14 +31,14 @@ function Page ({ params }: { params: { timestamp: string, eventName: string, bgI
       }
     }, 1000)
     return () => clearInterval(interval)
-  }, [])
+  }, [params.timestamp])
 
   return (
     <>
       <Background>
         <Header />
         {countdown ? <div className="flex items-center justify-center flex-1 w-full h-full">
-          <div className="w-full p-6 mx-6 -translate-y-6 rounded-lg sm:translate-y-0 bg-slate-300 bg-opacity-80 drop-shadow-2xl max-w-max">
+          <div className="w-full p-6 mx-6 -translate-y-6 bg-opacity-50 rounded-lg sm:translate-y-0 bg-slate-300 drop-shadow-2xl max-w-max backdrop-blur-md">
 
             <h1 className="w-full mb-8 overflow-hidden text-xl font-bold text-center uppercase whitespace-nowrap lg:mb-8 lg:text-4xl text-ellipsis sm:text-3xl text-sky-950">{decodeURI(params.eventName)}</h1>
 

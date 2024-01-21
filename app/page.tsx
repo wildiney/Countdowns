@@ -118,7 +118,7 @@ export default function Home () {
               {countdowns.map((countdown, index) => (
 
 
-                <li className='flex items-center justify-between p-4 text-center bg-white rounded-md bg-opacity-80 indent-0 grow' key={index}>
+                <li className='flex items-center justify-between p-4 text-center bg-white bg-opacity-50 rounded-md indent-0 grow backdrop-blur-md' key={index}>
                   {typeof (countdown.link) == 'string' ? <div className='flex items-center justify-between w-full gap-6'>
                     <Link className='flex flex-col w-full text-sm text-left break-all' href={countdown.link}>
                       <div className='flex justify-start text-lg font-bold uppercase text-sky-950'>{countdown.name}</div>
