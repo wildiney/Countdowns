@@ -11,7 +11,7 @@ function Index ({ children, bgImage }: { children: React.ReactNode, bgImage?: st
             <div className='fixed z-0 w-full h-full'>
                 <div className='w-full h-full maskBody' style={{ zIndex: 2 }}></div>
                 <Image
-                    src={bgImage ? bgImage : 'https://source.unsplash.com/random/?travel'}
+                    src={bgImage ? bgImage : 'https://source.unsplash.com/random/?travel,art,architecture'}
                     alt=''
                     fill={true}
                     priority={false}
